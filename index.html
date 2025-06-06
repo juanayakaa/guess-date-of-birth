@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Guesser Game!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="p-4 md:p-6">
+
+    <div class="theme-selector-container">
+        <label for="themeSelector" class="theme-selector-label">Choose a Theme:</label>
+        <select id="themeSelector">
+            <option value="default">🎨 Default</option>
+            <option value="ocean-blue">🌊 Ocean Blue</option>
+            <option value="forest-green">🌲 Forest Green</option>
+            <option value="cosmic-purple">✨ Cosmic Purple</option>
+            <option value="sunny-yellow">☀️ Sunny Yellow</option>
+            <option value="candy-pink">🍬 Candy Pink</option>
+            <option value="night-mode">🌙 Night Mode</option>
+        </select>
+    </div>
+
+    <main>
+        <div class="main-container">
+            <h1 class="main-heading text-3xl sm:text-4xl font-bold text-center mb-6 tracking-tight flex items-center justify-center gap-3">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-9 h-9 text-orange-500">
+                   <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L1.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.624L16.5 21.75l-.398-1.126a3.375 3.375 0 00-2.455-2.456L12.75 18l1.126-.398a3.375 3.375 0 002.455-2.456L16.5 14.25l.398 1.126a3.375 3.375 0 002.456 2.456L20.25 18l-1.126.398a3.375 3.375 0 00-2.456 2.456z" />
+                 </svg>
+                 Birthday Guesser Game
+            </h1>
+
+            <p class="sub-heading text-center mb-6">Think of the <strong>day</strong> of the month you were born (1-31). I will ask you 5 questions.</p>
+            <p class="sub-heading text-center mb-6"> Answer honestly!😉</p>
+
+            <div id="gameArea">
+                <div id="questionCard" class="question-card hidden">
+                    <p id="questionText">Is your birth day in this set of numbers?</p>
+                    <div id="numberSetDiv" class="number-set">
+                        </div>
+                    <div class="flex gap-4 mt-4">
+                         <button id="yesBtn" class="action-button yes-button">Yes</button>
+                         <button id="noBtn" class="action-button no-button">No</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultArea" class="hidden">
+                <p id="thinkingText">Okay, let me think...</p>
+                <p id="resultText"></p>
+                 <button id="resetBtn" class="action-button mt-4">Play Again?</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <p>© 2025 ToolForge. All rights reserved.</p>
+        <p>Built with ❤️ by juanayaka.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
